@@ -2,7 +2,7 @@
     --Dark-cyan: hsl(158, 36%, 37%);
     --Cream: hsl(30, 38%, 92%);
 
-    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Very-dark-blue: hsl(122, 29%, 22%);
     --Dark-grayish-blue: hsl(228, 12%, 48%);
     --White: hsl(0, 0%, 100%);
 
@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: rgb(244, 228, 210);
+    background-color: rgb(242, 230, 217);
     display: grid;
     justify-items: center;
     margin-top: 150px;
@@ -33,12 +33,16 @@ body {
     align-items: center;
 }
 
-.main-image img {
+.desktop-image {
     margin-top: 4px;
     width: 300px;
     height: 100%;
     object-fit: fill;
     border-radius: 20px 0 0 20px;
+}
+
+.mobile-image {
+    display: none;
 }
 
 .right-panel {
@@ -48,6 +52,60 @@ body {
 .title{
     font-size: 12px;
     color: var(--Dark-grayish-blue);
+    letter-spacing: 10px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.main-title {
+    font-family: 'Fraunces';
+    font-size: 32px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.description {
+    color: var(--Dark-grayish-blue);
+    font-size: 16px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.prices {
+    display: flex;
+    margin: 5px;
+    justify-content: space-evenly;
+}
+
+.price-discounted{
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-family: 'Fraunces';
+    color: var(--Dark-cyan);
+    font-weight: bold;
+}
+
+.regular-price {
+    display: grid;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+    align-items: center;
+}
+
+.add-to-cart {
+    width: 250px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    background-color: var(--Very-dark-blue);
+    color: white;
+    border-radius: 5px;
+}
+
+.add-to-cart img {
+    margin-right: 20px;
 }
 
 footer{
@@ -57,4 +115,42 @@ footer{
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 600px){
+    .main-container{
+        display: grid;
+        width: 300px;
+        height: 600px;
+        border-radius: 20px;
+    }
+
+    .right-panel{
+        display: grid;
+        justify-items: start;
+    }
+
+    .desktop-image{
+        display: none;
+    }
+    .mobile-image {
+        display: flex;
+        width: 300px;
+        height: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .main-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .prices {
+        margin-left: 25px;
+    }
+
+    .regular-price {
+        margin-left: 20px;
+    }
 }
