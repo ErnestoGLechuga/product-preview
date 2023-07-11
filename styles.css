@@ -10,21 +10,51 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-footer{
-    position: absolute;
-    bottom: 0;
-    left: 400px;
-}
-.attribution { 
-    font-size: 11px;
-    text-align: center; 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.attribution a { 
-    color: hsl(228, 45%, 44%); 
+body {
+    background-color: rgb(244, 228, 210);
+    display: grid;
+    justify-items: center;
+    margin-top: 150px;
+}
+
+.main-container{
+    display: flex;
+    width: 600px;
+    height: 450px;
+    margin: 3px;
+    border-radius: 20px;
+    background-color: var(--Cream);
+    align-items: center;
+}
+
+.main-image img {
+    margin-top: 4px;
+    width: 300px;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 20px 0 0 20px;
+}
+
+.right-panel {
+    display: grid;
 }
 
 .title{
     font-size: 12px;
     color: var(--Dark-grayish-blue);
+}
+
+footer{
+    text-align: center;
+    font-size: 11px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
 }
